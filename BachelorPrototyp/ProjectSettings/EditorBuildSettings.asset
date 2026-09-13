@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: 0e69ed83656e68d4382f8a3dd898a64e
+  - enabled: 1
+    path: Assets/Scenes/Warmup.unity
+    guid: 7c4e91f2a8b64d0e9f13c5a6b2d84701
+  - enabled: 1
+    path: Assets/Scenes/Explicit.unity
+    guid: 3e9a12c8f0464b7a8d5e1c90b6f73422
+  - enabled: 1
+    path: Assets/Scenes/Implicit.unity
+    guid: 5b18d0479c2e4fa1a76c83e0d4b91533
+  - enabled: 1
+    path: Assets/Scenes/Control.unity
+    guid: 9f62ae31d5c8472bb0e14f8a7c306644
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

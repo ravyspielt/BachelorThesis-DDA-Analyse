@@ -1,0 +1,25 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSessionId(id) {
+      return id is string && id.size() == 32;
+    }
+
+    match /users/{userId} {
+      allow create, update: if isSessionId(userId);
+      allow read, delete: if false;
+
+      match /levels/{levelId} {
+        allow create, update: if isSessionId(userId)
+          && levelId in ['Warmup', 'Explicit', 'Implicit', 'Control', 'PostExperiment'];
+        allow read, delete: if false;
+      }
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
